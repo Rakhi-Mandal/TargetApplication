@@ -1,0 +1,5 @@
+Target Application Logs: 19 February 2025
+Sucessfully validated the page details
+First item in result: amazfit bip 5 unity smartwatch
+Calculated discounted price: 5
+Claimed discounted price: 5.006

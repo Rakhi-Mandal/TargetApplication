@@ -1,0 +1,80 @@
+{
+    "updatedIsbn":"9781449365035",
+    "sampleIsbn":"9781491904244",
+    "userId":"03cc8d05-30e8-468d-91aa-e93d88a71fca",
+    "property":"author",
+    "authenticationToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InJha2hpX21hbmRhbCIsInBhc3N3b3JkIjoiQm9va0FwaUAxMjMiLCJpYXQiOjE3Mzc2MDczMjZ9.lOShjO1ETGYPMPpRVC3lmjVSKiAxseZAf2-5hJpoWFo",
+
+    "deleteRequestBody" :{
+      "type": "object",
+      "properties": {
+          "isbn": { "type": "string" },
+          "userId": { "type": "string" }
+      }
+      },
+  
+   "GetABookResponseBody" : {
+      "type": "object",
+      "properties": {
+          "isbn": { "type": "string" },
+          "title": { "type": "string" },
+          "subTitle": { "type": "string" },
+          "author": { "type": "string" },
+          "publish_date":{ "type": "string", "format": "date-time" },
+          "publisher": { "type": "string" },
+          "pages": { "type": "number" },
+          "description": { "type": "string" },
+          "website":{"type":"string"}
+      }
+  },
+  "addABookRequestBody" : {
+      "type": "object",
+      "properties": {
+          "userId": { "type": "string" },
+          "collectionOfIsbns":  { "type": "array" },
+         
+            "items": {
+             "type": "object",
+             "properties": {
+             "isbn": { "type": "string" }
+        },
+        "required": ["isbn"] 
+       
+      }
+  }
+ 
+  },
+  "ModifyAndFetchBookResponseBody" : {
+      "type": "object",
+      "properties": {
+          "userId": { "type": "string" },
+          "username": { "type": "string" },
+          "books": { 
+            "type": "array" ,
+            "properties": {
+                  "isbn": { "type": "string" },
+                  "title": { "type": "string" },
+                  "subTitle": { "type": "string" },
+                  "author": { "type": "string" },
+                  "publish_date":{ "type": "string", "format": "date-time" },
+                  "publisher": { "type": "string" },
+                  "pages": { "type": "number" },
+                  "description": { "type": "string" },
+                  "website":{"type":"string"}
+              }
+            }
+  },
+  "required":["userId","username"]
+  
+  
+  
+},
+"updateRequestBody" :{
+    "type": "object",
+    "properties": {
+        "isbn": { "type": "string" },
+        "userId": { "type": "string" }
+    },
+    "required":["isbn"]
+    }
+}

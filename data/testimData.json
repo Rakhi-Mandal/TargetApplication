@@ -1,0 +1,16 @@
+{
+    "companySection":{
+        "text" : "About"
+    },
+
+    "customerSubSection":{
+        "name" : "Maor F",
+        "position":"Senior Software Engineer",
+        "reviewContent":"Testim.io is a game changer for anyone who relies on automated tests"
+    },
+    "subSectionTexts":[
+        "About","Customers","Careers","Testim Partners"
+    ]
+
+
+}

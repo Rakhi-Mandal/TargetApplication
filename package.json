@@ -1,0 +1,29 @@
+{
+  "name": "applicationplaywright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "launchBooking": "npx playwright test booking.spec.js --project=chromium",
+    "launchYoutube": "npx playwright test youtube.spec.js --project=chromium",
+    "launchTestim": "npx playwright test testim.spec.js --project=chromium",
+    "launchTarget": "npx playwright test target.spec.js --project=firefox",
+    "launchApiTesting": "npx playwright test bookApi.spec.js --project=chromium",
+    "launchAll":"npm run launchYoutube && npm run launchTestim && npm run launchTarget",
+    "test:allure": "playwright test --reporter=allure-playwright",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:serve": "allure serve allure-results",
+    "allure:reports": "npm run allure:generate && npm run allure:serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.3",
+    "allure-playwright": "^3.0.9"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
